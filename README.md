@@ -1,4 +1,4 @@
-﻿# Welcome to CRUDS Shoes Store Website Project ☺👋
+﻿# Welcome to  Shoes Store Website  ☺👋
  
 Welcome to the Shoes Store Website Project repository! This project is a web-based application that showcases a collection of shoes for sale. It is built using HTML5, CSS3, and JavaScript.
 
