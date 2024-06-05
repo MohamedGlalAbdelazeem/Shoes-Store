@@ -24,12 +24,14 @@ body{
     flex-direction: column;
 }
 .login .container .login form input{
-    padding: 10px;
+    padding: 15px;
     border: none;
     outline: none;
     margin-bottom: 50px;
-    font-size: 15px;
-    border: 1px solid  #c72092;
+    font-size: 17px;
+    border-radius: 5px;
+    box-shadow:2px 2px 3px black;
+
 }
 .login .container .login h1{
     font-size: 55px;
@@ -46,7 +48,10 @@ body{
     border: none;
     outline: none;
 }
-
+.login .container .login button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
 @media (max-width:549px) {
     .login .container .image img{
        display: none;

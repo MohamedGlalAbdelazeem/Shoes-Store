@@ -28,17 +28,18 @@
                 <img src="./image/logshoes.png" alt="login page image">
             </div>
             <div class="login">
-                <h1 >Welcome Login👋</h1>
-                <form action="get">
-                    <input type="text" placeholder="user name" required>
-                    <input type="password" placeholder="user password" required>
-                    <button>submit</button>
-                    <p>you Don't have any  <a href="./Registration.html" target="_blank">account?</a></p>
+                <h1 >Welcome to Login👋</h1>
+                <form>
+                    <input type="text" id="user-input" placeholder="user name" required>
+                    <input type="password" id="password-input" placeholder="user password" required>
+                    <button type="submit" onclick="Login(event)" >Login</button>
+                    <p>you Don't have any  <a href="./Registration.html">account?</a></p>
                 </form>
             </div>
         </div>
     </section>
-
     <!-- end main section --> 
+
+    <script src="main.js"></script>
 </body>
 </html>

@@ -56,8 +56,9 @@ header .container nav ul{
 }
 header .container nav ul li{
     display: flex;
-   
 }
+
+ 
 header .container nav ul li a{
     text-decoration: none;
     font-size: 18px;
@@ -80,15 +81,26 @@ header .container nav ul li a:hover::before{
     width: 50%;
 }
  
+header .container nav ul li:last-child{
+    background-color:#c72092;
+    border-radius: 20px;
+    color: white !important;
+}   
+header .container nav ul li:last-child a{
+    color: white !important;
+}   
+header .container nav ul li:last-child:hover{
+    opacity: 0.7;
+} 
 header .container .icons{
-    font-size: 20px;
+    font-size: 23px;
 }
 header .container .icons i{
     padding: 5px;
 }
 header .container .icons i:hover{
-    color: var(--color);
     cursor: pointer;
+    opacity: 0.5;
 }
 @media (max-width:770px) {
     header .container {
@@ -111,7 +123,17 @@ header .container .icons i:hover{
         top: 18%;
     }
 }
-
+#logout{
+    background-color: rgba(255, 0, 0, 0.722);
+    border-radius: 10px;
+}
+#logout a{
+    font-weight: 600;
+    color: white;
+}
+#logout:hover{
+     opacity: 0.5;
+}
 /* end header */
 
 /* start main sectoin  */
@@ -175,12 +197,14 @@ header .container .icons i:hover{
     align-items: center;
     position: relative;
     right: -35px;
-    font-size: 20px;
+    font-size: 26px;
  }
  .main .container .icons i{
     margin-bottom: 30px;
-    padding: 3px;
-    border-radius: 5px;
+    border-radius: 40%;
+    background-color: #c72092;
+    color: white;
+    padding: 7px;
 }
 .main .container .icons i:hover{
     color: var(--color);
@@ -262,9 +286,12 @@ header .container .icons i:hover{
     border-radius: 10px;
     margin-bottom: 50px;
     margin-right: 50px;
-    box-shadow: 0 0 10px var(--color);
+    transition: 0.5s;
 }
-
+.products .container .boxes .box:hover{   
+     box-shadow: 0 10px 4px black;
+     cursor: pointer;
+}
 .products .container .boxes .image img{
     width: 50%;
     margin: 0 auto;
@@ -579,7 +606,6 @@ footer{
     width: 100%;
     height: 100%;
     border-top: 2px solid var(--color);
-    box-shadow: 0 0 10px var(--color);
 } 
 footer .container{
     display: flex;

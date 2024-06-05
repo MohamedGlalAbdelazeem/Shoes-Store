@@ -5,11 +5,84 @@ window.addEventListener("scroll", () => {
   el.style.width = `${(scrollTop / height) * 51}%`;
 });
 
+function Login(event) {
+  event.preventDefault();
+  let userInput = document.getElementById('user-input').value;
+  let userPassword = document.getElementById('password-input').value;
 
-//-----------------------------------------------------------
+  if (userInput.length === 0 && userPassword.length === 0) {
+    alert("You must enter your data");
+  } else if (userInput.length === 0) {
+    alert("You must enter a username");
+  } else if (userPassword.length === 0) {
+    alert("You must enter a password");
+  } else {
+    localStorage.setItem("user", userInput)
+    window.location = 'index.html'
+    updateButtonVisibility()
+  }
+}
+
+function Regestration() {
+  event.preventDefault();
+  let userName = document.getElementById('username-input').value.trim();
+  let email = document.getElementById('email-input').value.trim();
+  let phoneNumber = document.getElementById('phone-input').value.trim();
+  let newPassword = document.getElementById('newpassword-input').value.trim();
+  let confirmPassword = document.getElementById('confirmpassword-input').value.trim();
+
+  if (!userName || !email || !phoneNumber || !newPassword || !confirmPassword) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  if (newPassword !== confirmPassword) {
+    alert("Passwords do not match!!!");
+    return;
+  }
+
+  // Store user data in localStorage
+  const user = {
+    userName: userName,
+    email: email,
+    phoneNumber: phoneNumber
+  };
+  localStorage.setItem("user", JSON.stringify(user));
+
+  // Redirect to login page
+  window.location.href = 'login.html';
+}
+function updateButtonVisibility() {
+  let regestrationBtn = document.getElementById("regester");
+  let logoutBtn = document.getElementById("logout");
+
+  if (localStorage.getItem("user")) {
+    regestrationBtn.style.visibility = "hidden";
+    logoutBtn.style.visibility = "visible";
+  } else {
+    regestrationBtn.style.visibility = "visible";
+    logoutBtn.style.visibility = "hidden";
+  }
+  
+}
+updateButtonVisibility()
+
+
+function Logout(event) {
+  event.preventDefault();
+  localStorage.clear(); 
+  window.location.href = 'login.html';
+  updateButtonVisibility()
+}
+
+function addProduct(event) {
+  event.preventDefault();
+  if (!localStorage.getItem("user")) {
+    window.location="login.html"
+  }
+}
 // start products section 
 let productsBox = document.getElementById("boxes");
-
 let products = [
   {
     id:1,
@@ -108,7 +181,6 @@ let products = [
     price: "$105",
   },
 ]
-
 function productsFuc() {
   let productsList  = products.map((product)=>{
   return `
@@ -131,14 +203,13 @@ function productsFuc() {
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
       </div>
-      <a href="#">Add To Cart</a>
+      <a href="#" onclick="addProduct(event)">Add To Cart</a>
     </div>
   `;
   });
   productsBox.innerHTML = productsList; 
 }
 productsFuc();
-// end products section
 
 
 // start Review section
@@ -197,5 +268,3 @@ function reviewFunc() {
 }
 reviewFunc();
 
-
-//end Review section
