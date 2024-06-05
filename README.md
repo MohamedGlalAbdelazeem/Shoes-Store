@@ -1,6 +1,60 @@
-﻿# Welcome to  Shoes Store Website  ☺👋
+﻿# Welcome to  E-commerce Store Website  ☺👋
  
-Welcome to the Shoes Store Website Project repository! This project is a web-based application that showcases a collection of shoes for sale. It is built using HTML5, CSS3, and JavaScript.
+ # E-Commerce Website
+
+## Overview
+
+Welcome to the E-Commerce Website project! This project is a simple and elegant online store built with HTML, CSS, and vanilla JavaScript. It features user registration, product listing, and an "Add to Cart" functionality.
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## Features
+
+- **User Registration**: Secure and seamless user registration process.
+- **Product Listing**: Display a list of products available for purchase.
+- **Add to Cart**: Functionality to add products to the shopping cart.
+- **Responsive Design**: Fully responsive design to provide a great user experience on all devices.
+
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+- A web browser (Chrome, Firefox, Safari, etc.)
+- Git
+
+### Installation
+
+1. Clone the repo
+    ```sh
+    git clone https://github.com/your-username/e-commerce-website.git
+    ```
+2. Open the `index.html` file in your preferred web browser to view the project.
+
+## Usage
+
+### User Registration
+
+1. Navigate to the registration page.
+2. Fill in all the required fields: username, email, phone number, new password, and confirm password.
+3. Submit the form to create a new user account.
+
+### Add to Cart
+
+1. Browse the product listings.
+2. Click the "Add to Cart" link on the desired product.
+3. The product will be added to your shopping cart.
+
+## Folder Structure
 
 
 # Features:
